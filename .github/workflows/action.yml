@@ -24,7 +24,7 @@ jobs:
           secure: true
           username: wforguo@qq.com
           password: qeptwqqhdwgxbfii
-          subject: Shanghai Weather Report (${{env.REPORT_DATE}})
+          subject: Hangzhou Weather Report (${{env.REPORT_DATE}})
           html_body: file://result.html
           to: wforguo@gmail.com,987219323@qq.com,wforguo@qq.com,2364752192@qq.com
           from: GitHub Actions
