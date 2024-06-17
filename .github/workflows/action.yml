@@ -17,11 +17,10 @@ jobs:
       - name: 'Get Date'
         run: echo "REPORT_DATE=$(TZ=':Asia/Hangzhou' date '+%Y-%m-%d %T')" >> $GITHUB_ENV
       - name: 'Send mail'
-        uses: dawidd6/action-send-mail@v3
+        uses: dawidd6/action-send-mail@master
         with:
           server_address: smtp.qq.com
-          server_port: 587
-          secure: true
+          server_port: 465
           username: wforguo@qq.com
           password: qeptwqqhdwgxbfii
           subject: Hangzhou Weather Report (${{env.REPORT_DATE}})
