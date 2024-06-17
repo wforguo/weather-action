@@ -20,10 +20,10 @@ jobs:
         uses: dawidd6/action-send-mail@v3
         with:
           server_address: smtp.qq.com
-          server_port: 25
+          server_port: 587
           secure: true
-          username: ${{ secrets.MAIL_USERNAME }}
-          password: ${{ secrets.MAIL_PASSWORD }}
+          username: wforguo@qq.com
+          password: qeptwqqhdwgxbfii
           subject: Shanghai Weather Report (${{env.REPORT_DATE}})
           html_body: file://result.html
           to: wforguo@gmail.com,987219323@qq.com,wforguo@qq.com,2364752192@qq.com
