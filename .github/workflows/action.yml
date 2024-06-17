@@ -6,6 +6,9 @@ on:
   schedule:
     - cron: '0 15 * * *'
 
+env: # 设置环境变量
+    TZ: Asia/Shanghai # 时区
+    
 jobs:
   bot:
     runs-on: ubuntu-latest
@@ -21,8 +24,8 @@ jobs:
         with:
           server_address: smtp.qq.com
           server_port: 465
-          username: wforguo@qq.com
-          password: qeptwqqhdwgxbfii
+          username: ${{ secrets.MAILUSERNAME }}
+          password: ${{ secrets.MAILPASSWORD }}
           subject: Hangzhou Weather Report (${{env.REPORT_DATE}})
           html_body: file://result.html
           to: wforguo@gmail.com,987219323@qq.com,wforguo@qq.com,2364752192@qq.com
